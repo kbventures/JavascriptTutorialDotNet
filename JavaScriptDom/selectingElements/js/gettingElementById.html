@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="Root"></div>
+    <p id="message">A paragraph</p>
+    <script>
+      const rootElement = document.getElementById('root');
+      console.log(rootElement);
+      const RootElement = document.getElementById('Root');
+      console.log(RootElement);
+      const p = document.getElementById('message');
+      console.log(p);
+    </script>
+  </body>
+</html>
+
+<!-- 
+Summary
+
+The getElementById() returns a DOM element specified by an id or null if no matching element found.
+
+If multiple elements share the same id, even though it is invalid, the getElementById() returns the first element it encounters.
+
+ -->

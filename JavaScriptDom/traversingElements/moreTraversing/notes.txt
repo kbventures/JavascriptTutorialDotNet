@@ -1,0 +1,2 @@
+Understanding Traversing & How To
+https://zellwk.com/blog/dom-traversals/

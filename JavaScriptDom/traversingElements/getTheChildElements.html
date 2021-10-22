@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS Get Child Elements</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li class="first">Home</li>
+      <li>Products</li>
+      <li class="current">Customer Support</li>
+      <li>Careers</li>
+      <li>Investors</li>
+      <li>News</li>
+      <li class="last">About Us</li>
+    </ul>
+    <script>
+      let content = document.getElementById('menu');
+      let firstChild = content.firstChild.nodeName;
+      /*
+      The Console window show #text because a text node is inserted to
+      maintain the whitespace between the openning <ul> and <li> tags.
+      This whitespace creates a #text node.
+
+      Note that any whitespace such as a single space, multiple spaces, returns,
+      and tabs will create a #text node. To remove the #text node, you can remove
+      the whitespaces as follows:
+
+      <article id="content"><h2>Heading</h2><p>First paragraph</p></article>
+      */
+      let firstElementChild = content.firstElementChild;
+      console.log(firstChild);
+      console.log(firstElementChild);
+
+      let lastChild = content.lastChild;
+      let lastElementChild = content.lastElementChild;
+      console.log(lastChild);
+      console.log(lastElementChild);
+      console.log(content.lastElementChild);
+
+      let children = content.children;
+      console.log(children);
+      let convertedChildrenArray = Array.from(content.children);
+      console.log(convertedChildrenArray);
+
+      /*
+      Summary
+        The firstChild and lastChild return the first and last child of a
+        node, which can be any node type including text node, comment node,
+        and element node.
+        The firstElementChild and lastElementChild return the first and last
+        child Element node.
+        The childNodes returns a live NodeList of all child nodes of any node
+        type of a specified node. The children return all child Element nodes
+        of a specified node.
+      */
+    </script>
+  </body>
+</html>
